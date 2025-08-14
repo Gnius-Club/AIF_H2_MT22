@@ -1,24 +1,301 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — 2º Preparatoria — Misión M22: Ingeniería de Despliegue</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M22: Ingeniería de Despliegue</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer" hidden>⏱️ 00:00</span>
+        <button id="startStop" hidden>Start</button>
+        <button id="reset" hidden>Reset</button>
+      </div>
+      <div class="theme-toggle" hidden>
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input" hidden>
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info" hidden>
+        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+      </div>
+    </aside>
+    <main id="playbook" class="playbook content">
+      <div class="progress-bar" hidden>
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues" hidden>Mostrar todos los diálogos</button>
+      <!-- 0) De un Vistazo -->
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M22: Ingeniería de Despliegue</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+        <div class="overview-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <section class="overview-block">
+                    <h3>Objetivos e “I Can”</h3>
+                    <ul>
+                      <li>Puedo explicar cómo exponer la lógica de un agente de IA como un servicio web utilizando frameworks Python.</li>
+                      <li>Puedo crear un endpoint API local que sirva las respuestas de un agente de IA.</li>
+                    </ul>
+                  </section>
+                  <section class="overview-block">
+                    <h3>Secuencia y tiempos</h3>
+                    <ol>
+                      <li>Saludo Interactivo con IA — 3 min</li>
+                      <li>“I Can” + Desafío — 5–7 min</li>
+                      <li>AI GYM — 10–12 min</li>
+                      <li>Brain Spark — 17–20 min</li>
+                      <li>GNIUS STORM — 5 min</li>
+                    </ol>
+                  </section>
+                  <section class="overview-block">
+                    <h3>Entregable del Micro-Proyecto</h3>
+                    <ul>
+                      <li>Un script Python (Flask/FastAPI) que implementa un servidor local con un endpoint `/ask-agent` que recibe una pregunta y devuelve la respuesta de un agente de IA en formato JSON.</li>
+                    </ul>
+                  </section>
+                </td>
+                <td>
+                  <section class="overview-block">
+                    <h3>Criterios de calidad</h3>
+                    <ul>
+                      <li>Endpoint operativo y accesible localmente.</li>
+                      <li>Capacidad de recibir preguntas vía HTTP y devolver respuestas JSON.</li>
+                      <li>Uso correcto de Flask o FastAPI para la creación del servicio web.</li>
+                      <li>Integración funcional de la lógica del agente de IA.</li>
+                      <li>Documentación básica del endpoint (ej. curl de prueba).</li>
+                    </ul>
+                  </section>
+                  <section class="overview-block">
+                    <h3>Materiales y preparación</h3>
+                    <ul>
+                      <li>Proyector e internet</li>
+                      <li>LLM (para la lógica del agente)</li>
+                      <li>IDE/CLI/Notebook (Python, Flask/FastAPI)</li>
+                      <li>API pública/clave (si el agente lo requiere)</li>
+                      <li>Repo/docs de evidencia</li>
+                    </ul>
+                    <p><strong>Preparación previa:</strong> Entorno Python configurado, Flask/FastAPI instalados, lógica de agente base lista.</p>
+                  </section>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- 1) Saludo Interactivo con IA -->
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Activar a Xolo con perfil e intereses; conectar con el foco de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y su valor profesional según la Columna 1.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo: hoy abordaremos la Ingeniería de Despliegue de Agentes como Servicio. Aprenderemos a exponer la lógica de un agente de IA como un servicio web, permitiendo que otras aplicaciones interactúen con él mediante peticiones HTTP y recibiendo respuestas JSON. Esto es fundamental para integrar la IA en sistemas complejos.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M22: Ingeniería de Despliegue. Necesito foco en [despliegue de agentes/FastAPI/Flask/endpoints API/JSON].”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 2) “I Can” + Desafío -->
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable, derivados de Columna 1 y 3.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El reto es transformar la lógica de un agente de IA en un servicio web accesible. Lograrán crear un servidor local que exponga un endpoint API, permitiendo que su agente interactúe con el mundo exterior. El éxito se medirá por la operatividad y la capacidad de integración de su API.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” concreto alineado al entregable de Columna 2.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo [acción] usando [criterio] para lograr [resultado].”</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 3) AI GYM -->
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco según Columna 3 (Despliegue de un agente como un servicio web (API). Herramientas: Python (FastAPI/Flask)).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El marco del día es el despliegue de agentes como servicios web, usando Python con Flask o FastAPI. Este enfoque permite que sus agentes sean consumidos por otras aplicaciones. Eviten no validar las entradas HTTP o no manejar correctamente los errores de serialización JSON. Asegúrense de que su entorno Python esté configurado para ejecutar el framework elegido.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Construye ejemplo mínimo alineado a las tres columnas del input.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observen cómo se define un endpoint básico en Flask/FastAPI. Verifiquen la estructura de la ruta y la respuesta JSON. ¿El servidor responde correctamente a una petición HTTP? ¿El JSON de salida es válido?</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Qué ventaja principal ofrece exponer un agente como un servicio web? Pregunta 2: ¿Qué formato de datos es estándar para la comunicación en APIs web?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 4) Brain Spark -->
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Indica el producto específico (Columna 2) y un checklist de calidad (Columna 3). Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta basada en criterios del marco.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida que tu endpoint maneje correctamente los errores (ej. si la pregunta no viene en el formato esperado). Si no se cumple, ajusta tu código para una respuesta más robusta.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita evidencia: El script Python del servidor, capturas de pantalla del servidor ejecutándose, y una captura de una prueba de `curl` o Postman mostrando la petición y la respuesta JSON del endpoint.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega con nombre: M22_IngenieriaDespliegue_[Equipo/Nombre]. Incluye el script Python, capturas de la consola mostrando el servidor activo, y una captura de una herramienta (curl, Postman) evidenciando la interacción con tu endpoint y la respuesta JSON.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 5) GNIUS STORM -->
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 presentaciones de 30–45 s, centradas en evidencia y criterio.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en cómo lograron exponer la lógica del agente como un servicio web, la estructura de su endpoint y la validación de la respuesta JSON.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje, 1 criterio de mayor impacto y 1 siguiente paso fuera del aula.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: Hoy aprendimos a transformar la lógica de un agente en un servicio web accesible, un paso crucial para la integración de IA. El criterio clave fue asegurar que la respuesta fuera un JSON válido y estructurado. Como siguiente paso, consideren integrar este endpoint en una aplicación real o explorar cómo añadir seguridad a su API.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
